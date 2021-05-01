@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+body{background-image: url(https://i.pinimg.com/originals/3f/3d/d9/3f3dd9219f7bb1c9617cf4f154b70383.jpg)
+;background-repeat: no-repeat ; background-size: cover; text-align: center;
+}
+table{margin: auto;
+border:black  4px groove;
+background-color: crimson;
+padding: 30px; }
+a{color: aqua;}
+td{ padding: 15px;}
+label{font-size: 22px; font-family: algerian; color: blue;}
+input[type=text],input[type=email],input[type=date],input[type=password]{background-color: lightblue;
+border-radius: 20px;
+padding: 10px;
+width: 250px;
+color: white;
+font-family: cursive;
+font-size: 18px;
+}
+input[type=checkbox],input[type=radio]{width: 30px; height: 30px  ;}
+
+input[type=text]:focus,input[type=email]:focus,input[type=date]:focus,input[type=password]:focus{background-color: teal; outline: none;}
+#boi{color: yellowgreen; ; width: 500px; margin: auto   ;}
+
+input[type=submit],button[type=reset]{margin: 30px; padding: 15px; font-size: 18px; color: white; border-radius: 20px; background-color: thistle;}
+
+input[type=submit]:hover,button:hover[type=reset]{padding:18px; background-color: turquoise ;}
+*{margin: 0px;
+        padding: 0px;}
+    #sidebar{
+        background-color: black;
+        height: 100%;
+        width: 230px;
+        text-align: center;
+        color: white;
+        padding-top: 40px;
+
+        transition: all 0.3s;
+        position: fixed;
+        left: -230px;
+        top: 0px;
+    }
+    #sidebar ul a  {
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        line-height: 60px;
+    }
+
+    #sidebar ul {
+        margin-top: 30px;
+    }
+    #sidebar ul li{
+        transition: all 0.4s;
+        border-bottom: rgb(17,16,16) 4px solid;
+    }
+    #sidebar ul li:hover{
+        background-color: rgb(17,15,15);
+        border-left: gold 15px solid;
+    }
+
+    #open{ width: 50px;
+        height: 50px;
+        background-color: black;
+        color: white;
+        font-size: 30px;
+        outline: none;
+        margin-right: 1500px;
+    }
+
+    #open:hover{
+        background-color: rgb(24,22,22);
+    }
+  
+
+    </style>
+<head>
+  
+  <title>Sign Up</title>                                                                                                                                                      
+
+
+                                                                                                                                                                                              
+
+
+</head>
+<body>
+    
+    <h1 id="boi"> Sign Up !!!    
+    </h1>
+    <button onclick="show()" id="open" >&#9776</button>
+ <div id="sidebar">
+     <button onclick="hide()">&#10006</button>
+    <h1> The Website of Random Utilities </h1>
+    <ul>
+        <li> <a href="Final Project.html"> Home </a>      </li>
+        <li> <a href="Sign up.html">Become a member!</a>    </li> 
+        <li> <a href="Quiz Form.html">Test your knowledge!</a>  </li> 
+        <li> <a href="Calculator.html">Calculator</a>     </li>
+        
+    </ul>
+
+ </div>  
+    <form onsubmit=" return validate()" action="thanks.html" >
+<table border="2px">
+
+<tr>
+<td> <label for="Fname"> First Name: </label>  </td>
+<td><input type="text" id="Fname" name="FirstName" required></td>
+</tr>
+
+<tr>
+    <td> <label for="Lname"> Last Name:</label>  </td>
+    <td><input type="text" id="Lname" name="LastName" required></td>
+    </tr>
+    <tr>
+        <td> <label id="label1" for="p1"> Password:</label >  </td>
+        <td><input type="password" id="p1" name="Pword" required></td>
+        </tr>
+    <tr>
+        <tr>
+            <td> <label for="p2">Confirm Password:</label>  </td>
+            <td><input type="password" id="p2" name="Pword2" required></td>
+            </tr>
+        <tr>
+        <td> <label for="Email"> Email Id:</label>  </td>
+        <td><input type="email" id="uname"name="uname/email" required></td>
+        </tr>
+        <tr>
+            <td> <label for="Gender"> Gender</label></td>  
+        <label>    <td> Male<input type="radio" id="Gender" name="Gender" value="M" required> Female<input type="radio" id="Gender" name="Gender" value="F" required></td></label>
+            </tr>
+            <tr>
+                <td> <label for="DOB"> Date of Birth</label></td>  
+                <td>  <input type="date" id="DOB" name="DOB" required></td>
+                </tr>
+     <tr>
+        <td><label for="T&C">I accept the <a href="Terms and conditions.html">terms and conditions</a></label>   </td>
+        <td><label><input type="checkbox" id="c1" name="T&C" required ></label></td>
+
+
+
+
+     </tr>
+     
+</table>
+<input type="submit" placeholder="Become a member!">
+ 
+
+<script>
+function validate()
+{
+var p1 = document.getElementById("p1").value ;
+var p2 = document.getElementById("p2").value ;
+var c1 = document.getElementById("c1");
+var uname = document.getElementById("uname").value;
+if (p1 != p2) 
+{
+   
+    document.getElementById("label1").innerHTML = "Passwords not matching!!!"
+    document.getElementById("label1").style.color ="red"
+    document.getElementById("p1").style.border = "2px solid red"
+    return false;
+
+}
+if(p1.length == 0 )
+{document.getElementById("label1").innerHTML = "Passwords can't be empty!!!"
+return false;}
+if(p1.trim().length == 0)
+{document.getElementById("label1").innerHTML = "Password cannot contain only spaces";
+return false;
+}
+
+var regexp_email = /^[a-z A-Z 0-9]{2,50}@[a-z A-Z]{2,8}\.[a-z A-Z]{2,5}$/ ;
+
+
+if (!regexp_email.test(uname))
+{
+
+alert(" Email Not Valid")
+return false;
+}
+
+if( !c1.checked)
+{
+alert("You Have to accept T&Cs.")
+return false;
+}
+
+}
+function show()
+{document.getElementById("sidebar").style.left = "0px";}
+function hide()
+
+{document.getElementById("sidebar").style.left = "-230px";}
+</script>
+    </form>
+</body>
+</html>

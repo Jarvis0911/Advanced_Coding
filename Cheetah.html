@@ -1,0 +1,65 @@
+<html>
+  <style>
+    h1{color : yellow;
+        text-shadow: 2px 2px 5px burlywood;}
+    h2{font-size : 30px;}
+    body{ background-color : peru;
+      text-align : center
+    }
+    p{ font-size : 22px;
+       font-family:arial;}
+    div{border :black 10px groove;
+    background-color : yellow;
+font-size: 20px;}
+
+#box{ width: 100%;
+height: 350px;
+border: crimson 10px groove;
+background-image: url(Cheetah1.jpg); 
+background-size: 100% 100%  ;   
+transition: all 0.4s ;
+}
+
+  </style>
+  <head>
+  
+  
+  
+  
+  </head>
+  
+  <body> </body>
+ <marquee scrollamount = "10"> <h1> <i><u>
+    Cheetah!</i></u> </h1></marquee>
+    <div id="box">
+
+    </div>
+    
+  
+  <h2><u>About Cheetah</u>. </h2>
+ <div> 
+  <p>Cheetahs are known for their incredible speed, and beautiful spots. These fleet-footed predators are capable of incredible speed when running in short sprints. Cheetahs are truly incredible and unique animals.These cats are lean and lanky, allowing them to reach incredible speeds. They have tan-colored fur with solid black, round spots. They have very long legs, a long narrow tail for balance, and a deep chest that contains large lungs.
+
+    Cheetahs have round ears, and black markings running from the inside of the eye to the corner of the mouth, this pattern gives a “running makeup” look to the face. </p></div>
+
+  <p>For more info  <a href="https://animals.net/cheetah/">visit</a></p>
+<script>
+
+var images = ["Cheetah1.jpg", "Cheetah2.jpg","Cheetah3.jpg","Cheetah4.jpg"]
+
+var i = -1;
+function slider ()
+{
+if (i>4)
+{i = 0 ;}
+i++
+
+document.getElementById("box").style.backgroundImage = "url("+ images[i]+")"
+
+}
+setInterval(slider, 3000)
+
+
+
+</script>
+</html>

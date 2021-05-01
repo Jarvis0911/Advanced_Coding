@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+       .center{   max-width: 175px;
+    margin: auto;
+    margin-top: 300px;
+    }
+  
+  
+  #loader{
+      width: 130px;
+      height: 130px;
+      border : black   15px groove;
+      border-radius: 50%;
+  animation-name: loader;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear ;
+  border-top: red 15px solid;
+  animation-direction: normal;
+  margin: auto;
+  margin-top: 15% ;
+  }
+  
+  @keyframes loader {
+  
+  from{ transform: rotate(0deg);}
+  
+  to{ transform: rotate(360deg);}
+  
+  }
+  #container_loader {display: none;}
+   </style>
+    <title>Image Mapping</title>
+</head>
+<body id="boi">
+<div id="loader_container">
+<h1>Image Mapping</h1> 
+
+
+
+<img src="Image mapping.jpeg" usemap="#mymap">
+
+
+
+
+<map id="mymap" name="mymap">
+<area shape="rect" coords="333,70,751,578" href="https://en.wikipedia.org/wiki/Laptop">
+<area shape="circle" coords="167,175,83" href="https://en.wikipedia.org/wiki/Flowerpot">
+<area shape="poly" coords=""  href="">
+
+</map>
+</div>
+<div class="loader"></div>
+</body>
+<script>
+function show()
+
+{
+document.getElementById("container_loader").style.display="block"
+document.getElementById("loader").style.display="none"
+}
+setTimeout(show, 6000)
+
+
+
+
+</script>
+</html>

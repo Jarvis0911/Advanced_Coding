@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Dom_Manupilations</title>
+</head>
+<body id="crazy">
+    
+<h1 id="head">Hello</h1>
+<p id="para">This is the para</p>
+<button onclick="change()">Click Me</button>
+
+<script>
+
+function change ()
+{
+
+document.getElementById("head").innerHTML = "Hi..How are you doing?"; 
+document.getElementById("para").innerHTML = "This is the para you clicked on!!!!!!!!!!!!!!!!!!!";
+document.getElementById("head").style.color = "black";
+document.getElementById("crazy").style.backgroundColor = "red";
+document.getElementById("head").style.textAlign = "center";
+document.getElementById("para").style.textAlign = "center";
+
+}
+
+</script>
+
+
+</body>
+</html>

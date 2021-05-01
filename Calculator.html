@@ -1,0 +1,97 @@
+<html lang="en">
+<head>  
+    <style>
+.container
+{
+border: black 5px solid;
+width: 230px;
+padding: 60px;
+text-align: center;
+margin: auto;
+border-radius: 10px;
+background-color: cadetblue;
+}
+h1{
+    text-align: center;
+    color: crimson;
+    background-color: darkgray;
+    
+}
+body{
+    background-image: url(maths.jpg);
+}
+input{
+    padding: 8px;
+    width: 200px;
+    border-radius: 10px;
+
+}
+input:hover{ background-color: darkcyan;
+transition: 0.5s;}
+input:focus{
+    background-color: cyan;
+}
+select{
+    width: 150px;
+    height: 20px;
+}
+    </style>
+    
+    <title>Calculator</title>
+</head>
+<body>
+  
+    <h1>
+    Calculator
+    </h1>
+
+<div class="container">
+<label> Number 1</label>    <br>
+<input type="text" placeholder="Enter First Number" id="num1"><br>
+<label> Number 2</label>    <br>
+<input type="text" placeholder="Enter Second Number" id="num2">
+
+<br><br>
+
+<select id="choice">
+    <option disabled selected > Select your choice
+    </option>
+<option value="+"> Addition (+)
+</option>
+<option value="-"> Subtraction (-)
+</option>
+<option value="x"> Multiplication (x)
+</option>
+<option value="/"> Division (/)
+</option>
+</select>
+
+<h1 id="result"></h1>
+<button onclick="calc()">Calculate</button>
+</div>
+</body>
+<script>
+
+function calc()
+{
+ var num1=  Number(document.getElementById("num1").value);
+ var num2=  Number(document.getElementById("num2").value);
+ var choice=   document.getElementById("choice").value;
+
+ if (choice == "+")
+ {var result = num1 + num2;}
+ if (choice == "-")
+ {var result = num1 - num2;}
+ if (choice == "x")
+ {var result = num1 * num2;}
+ if (choice == "/")
+ {var result = num1 / num2;}
+
+document.getElementById("result").innerHTML = result;
+
+
+
+}
+
+</script>
+</html>

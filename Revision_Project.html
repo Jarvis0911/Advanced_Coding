@@ -1,0 +1,198 @@
+<html lang="en">
+
+<head>
+    <style>
+             *{margin: 0px;
+    padding: 0px;}
+#sidebar{
+    background-color: black;
+    height: 100%;
+    width: 230px;
+    text-align: center;
+    color: white;
+    padding-top: 40px;
+
+    transition: all 0.3s;
+    position: fixed;
+    left: -230px;
+    top: 0px;
+}
+#sidebar ul a  {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    line-height: 60px;
+}
+
+#sidebar ul {
+    margin-top: 30px;
+}
+#sidebar ul li{
+    transition: all 0.4s;
+    border-bottom: rgb(17,16,16) 4px solid;
+}
+#sidebar ul li:hover{
+    background-color: rgb(17,15,15);
+    border-left: gold 15px solid;
+}
+
+#open{
+
+
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    outline: none;
+}
+
+#open:hover{
+    background-color: rgb(24,22,22);
+}
+
+.center{   max-width: 175px;
+    margin: auto;
+    margin-top: 300px;}
+  
+  
+  #loader{
+      width: 130px;
+      height: 130px;
+      border : black   15px groove;
+      border-radius: 50%;
+  animation-name: loader;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear ;
+  border-top: purple 15px solid;
+  animation-direction: normal;
+  margin: auto;
+  margin-top: 15% ;
+  }
+  
+  @keyframes loader {
+  
+  from{ transform: rotate(0deg);}
+  
+  to{ transform: rotate(360deg);}
+  
+  }
+  #loader_container {display: none;}
+    </style>
+    
+   <link rel="stylesheet" href="Revision_Code _CSS.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Survey Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader_container">
+        <button onclick="show()" id="open">&#9776</button>
+ <div id="sidebar">
+     <button onclick="hide()">&#10006</button>
+    <h1>  My Website </h1>
+    <ul>
+        <li> <a href="#occupation"> Q1 </a>      </li>
+        <li> <a href="#Q2">Q2</a>    </li> 
+        <li> <a href="#Q3">Q3</a>  </li> 
+        <li> <a href="#Q4">Q4</a>     </li>
+        <li> <a href="#suggest">Suggestions</a>    </li> 
+    </ul>
+
+ </div>   
+
+<h1 style="font-family: Dosis;">Survey on the effects of COVID 19, on regular everyday life.</h1><i class="fa fa-facebook-square"></i>
+<br><br>
+<div class="container">
+
+
+<form action="">
+<label for="fullname"> Full Name </label>                    <br>
+<input type="text" name="fname" required placeholder="Enter Your Name" id="fullname" class="input">
+
+<br><br>
+
+<label for="email"> Email</label>       <br>
+<input type="email" placeholder="Enter your email" required id="email" name="email"class="input">
+
+
+<br><br>
+
+<label for="Age"> Age</label>       <br>
+<input type="number" placeholder="Enter your age" required id="Age" name="Age"class="input">
+
+<br> <br> 
+
+<label id="occupation">     Which Option Best describes your current occupation        </label> <br>
+<select class="input">
+    <option disabled selected>Select an option</option>
+<option>Student</option>
+<option>Full Time Employed</option>
+<option>Unemployed</option>
+<option>Prefer not to say</option>
+<option> other</option>
+
+</select>
+<br> <br>
+<label id="Q2">Would you say COVID-19 has disturbed your occupation?</label>
+<br><br>
+<label><input type="radio" name="r1"> Definitely </label><br> <br>
+<label><input type="radio" name="r1"> Maybe </label><br> <br>
+<label><input type="radio" name="r1"> Not So Sure </label><br> <br>
+
+
+<br> 
+
+<label id="Q3">     What is the most difficult thing you've experienced throughout this Plague?        </label> <br>
+<select class="input">
+    <option disabled selected>Select an option</option>
+
+<option>Workplace Challenges</option>
+<option>Working from home</option>
+<option>Lack of outdoor activities </option>
+<option> Financial issues</option>
+<option> other</option>
+</select>
+<br> <br>   
+<label id="Q4">What would you say is the one positive in your life due to this new situation?<br><i> (Check all that apply)</i></label><br>
+<label><input type="checkbox"> Spending time with family</label> <br> <br>
+<label><input type="checkbox"> More time for self improvement</label> <br> <br>
+<label><input type="checkbox"> Easier to maintain fitness and eat healthier.</label> <br> <br>
+<label><input type="checkbox"> More time for hobbies</label> <br> <br>
+<label><input type="checkbox"> Impact on global environment</label> <br> <br>
+<label><input type="checkbox"> Easier to be lazy!</label> <br> <br>
+
+<label id="suggest">Any comments or suggestions?</label><br><br>
+<textarea class="input" placeholder=" Enter comment here...."></textarea>
+<br><br>
+
+
+
+<label><input type="submit" class="input"></label>
+
+
+</form>
+
+</div>
+
+</div>
+<div id="loader"> </div>
+<script>
+function show2()
+
+{
+document.getElementById("loader_container").style.display="block"
+document.getElementById("loader").style.display="none"
+}
+setTimeout(show2, 5000)
+function show()
+{document.getElementById("sidebar").style.left = "0px";}
+function hide()
+
+{document.getElementById("sidebar").style.left = "-230px";} 
+
+
+</script>
+</body>
+</html>

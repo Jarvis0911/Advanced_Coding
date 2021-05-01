@@ -1,0 +1,163 @@
+<html lang="en">
+<head>
+    <style>
+.center{   max-width: 175px;
+  margin: auto;
+  margin-top: 300px;}
+
+
+#loader{
+    width: 130px;
+    height: 130px;
+    border : black   15px groove;
+    border-radius: 50%;
+animation-name: loader;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+animation-timing-function: linear ;
+border-top: red 15px solid;
+animation-direction: normal;
+margin: auto;
+margin-top: 15% ;
+}
+*{margin: 0px;
+        padding: 0px;}
+    #sidebar{
+        background-color: black;
+        height: 100%;
+        width: 230px;
+        text-align: center;
+        color: white;
+        padding-top: 40px;
+
+        transition: all 0.3s;
+        position: fixed;
+        left: -230px;
+        top: 0px;
+    }
+    #sidebar ul a  {
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        line-height: 60px;
+    }
+
+    #sidebar ul {
+        margin-top: 30px;
+    }
+    #sidebar ul li{
+        transition: all 0.4s;
+        border-bottom: rgb(17,16,16) 4px solid;
+    }
+    #sidebar ul li:hover{
+        background-color: rgb(17,15,15);
+        border-left: gold 15px solid;
+    }
+
+    #open{
+
+
+        width: 50px;
+        height: 50px;
+        background-color: black;
+        color: white;
+        font-size: 30px;
+        outline: none;
+    }
+
+    #open:hover{
+        background-color: rgb(24,22,22);
+    }
+
+@keyframes loader {
+
+from{ transform: rotate(0deg);}
+
+to{ transform: rotate(360deg);}
+
+}
+#container {display: none;}
+ 
+#slider{ width: 100%;
+height: 100%;   
+border: crimson 10px groove;
+background-image: url(Signup1.jpg); 
+background-size: 100% 100%  ;   
+transition: all 0.4s ;
+}
+body{background-color: crimson;}
+
+#heading{ color: cyan; font-family: cursive; text-align: center; }
+p{color: aquamarine; font-family: cursive; }
+    </style>
+    <title>Final Project</title>
+
+
+
+</head>
+<body>
+    
+<div id="container">
+
+    
+
+
+    <button onclick="showbar()" id="open">&#9776</button>
+    <div id="sidebar">
+        <button onclick="hide()">&#10006</button>
+       <h1>  The Website of Random Utilities </h1>
+       <ul>
+           <li> <a href="Final Project.html"> Home </a>      </li>
+           <li> <a href="Sign up.html">Become a member!</a>    </li> 
+           <li> <a href="Quiz Form.html">Test your knowledge</a>  </li> 
+           <li> <a href="Calculator.html">Calculator</a>     </li>
+           
+       </ul>
+   
+    </div>   
+    <h1 id="heading">The Website of Random Utilities!</h1><br><br>
+    <p>Thank you for visitng this site, hope you enjoy the experience below are some of the utilities that are available in this website:</p>
+    <div id="slider"></div>
+
+
+
+
+    </div>
+    <div id="loader"> </div>
+
+    
+
+    <script>
+
+function show()
+
+{
+document.getElementById("container").style.display="block"
+document.getElementById("loader").style.display="none"
+}
+setTimeout(show, 6000)
+
+function showbar()
+{document.getElementById("sidebar").style.left = "0px";}
+function hide()
+
+{document.getElementById("sidebar").style.left = "-230px";}
+
+var images = ["Signup1.jpg", "calc.jpg","lightdark.gif","quizyay.jpg"]
+
+var i = -1;
+function slider ()
+{
+if (i>4)
+{i = 0 ;}
+i++
+
+document.getElementById("slider").style.backgroundImage = "url("+ images[i]+")"
+
+}
+setInterval(slider, 3000)
+</script>
+
+
+</body>
+</html>

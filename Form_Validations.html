@@ -1,0 +1,78 @@
+
+<html lang="en">
+<head>
+ 
+    <title>Form Validations</title>
+</head>
+<body>
+  <form onsubmit=" return validate()" action="loader.html">
+<input type="text" placeholder="Username" id="uname">      <br>
+<input type="password" placeholder="Password" id="p1"> <label id="label1"></label> <br>
+<input type="password" placeholder="Confirm-Password" id="p2">  <br><br>
+<input type="checkbox" id="c1"> Accept T&C <br><br>
+<input type="submit" >
+
+
+  </form>  
+
+  <script>
+function validate()
+{
+var p1 = document.getElementById("p1").value ;
+var p2 = document.getElementById("p2").value ;
+var c1 = document.getElementById("c1");
+var uname = document.getElementById("uname").value;
+
+// var regexp = / a/ ;
+
+// var regexp = / [axyz]bc/ ;
+
+// var regexp = / [axyz]00/ ;
+
+// var regexp = / [a-z A-Z 0-9]00/ ;
+
+// var regexp = / ^[a-z A-Z 0-9]{3}00$/ ;
+// var regexp = / ^04[0-9]{8}$/ ; 
+
+var regexp_email = / ^[a-z A-Z 0-9]{2,50}@[a-z A-Z]{2,8}\.[a-z A-Z]{2,5}$/ ;
+
+
+if (regexp_email.test(uname))
+{
+
+alert("Valid")
+
+}
+else
+{
+    alert("Not Valid!!!")
+}
+if( !c1.checked)
+{
+alert("You Have to accept T&Cs.")
+return false;
+}
+
+
+if (p1 != p2) 
+{
+    // alert("Invalid....Passwords not matching")
+    document.getElementById("label1").innerHTML = "Passwords not matching!!!"
+    document.getElementById("label1").style.color ="red"
+    document.getElementById("p1").style.border = "2px solid red"
+return false;
+
+}
+if(p1.length == 0 )
+{document.getElementById("label1").innerHTML = "Passwords can't be empty!!!"
+return false;}
+if(p1.trim().length == 0)
+{document.getElementById("label1").innerHTML = "Password cannot contain only spaces";
+return false;
+}
+
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<html lang="en">
+
+
+<head>
+    <style>
+
+h1{text-align: center;}
+*{margin: 0px;
+        padding: 0px;}
+    #sidebar{
+        background-color: black;
+        height: 100%;
+        width: 230px;
+        text-align: center;
+        color: white;
+        padding-top: 40px;
+
+        transition: all 0.3s;
+        position: fixed;
+        left: -230px;
+        top: 0px;
+    }
+    #sidebar ul a  {
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        line-height: 60px;
+    }
+
+    #sidebar ul {
+        margin-top: 30px;
+    }
+    #sidebar ul li{
+        transition: all 0.4s;
+        border-bottom: rgb(17,16,16) 4px solid;
+    }
+    #sidebar ul li:hover{
+        background-color: rgb(17,15,15);
+        border-left: gold 15px solid;
+    }
+    #open{
+
+
+width: 50px;
+height: 50px;
+background-color: black;
+color: white;
+font-size: 30px;
+outline: none;
+}
+
+#open:hover{
+background-color: rgb(24,22,22);
+}
+.quiz{ border: black 2px solid; background-color: coral; margin: auto; }
+body{background-color: cyan;}
+p{color: aquamarine;
+}
+input{color: burlywood;}
+#bumboi{ border-radius: 4px;
+color: chocolate; background-color: wheat; width: 300px; height: 100px; font-size: 35px;}
+#pboi{color: brown;}
+#special{border-radius: 4px;
+color: black; background-color: grey; width: 50px; height: 50px; font-size: 10px;}
+    </style>
+    <title>Quiz</title>
+</head>
+<body id="body">
+    <h1>Random Quiz</h1>
+    <p id="pboi">Try changing the themes by clicking on the sidebar and selecting light or dark Mode</p>
+    <button onclick="showbar()" id="open">&#9776</button>
+    <div id="sidebar">
+        <button onclick="hide()">&#10006</button>
+       <h1>  The Website of Random Utilities </h1>
+       <ul>
+           <li> <a href="Final Project.html"> Home </a>      </li>
+           <li> <a href="Sign up.html">Become a member!</a>    </li> 
+           <li> <a href="Quiz Form.html">Test your knowledge</a>  </li> 
+           <li> <a href="Calculator.html">Calculator</a>     </li>
+        <li> <button onclick="dark()" id="special">Dark Mode!</button></li>
+        <li> <button onclick="light()" id="special">Light Mode!</button></li>
+       </ul>
+   
+    </div>   
+<div class="quiz" id="quiz">
+
+
+<p> 1.What is the name of the creator of this quiz?</p>
+
+<input type="radio" name="q1" value="f"> Knatik <br>
+<input type="radio" name="q1" value="f"> kraik <br>
+<input type="radio" name="q1" value="t" id="q1" class="answer"> Karthik <br>
+<input type="radio" name="q1" value="f"> Steve <br>
+<hr>
+
+<p>2.What is the fastest land animal?</p>
+
+<input type="radio" name="q2" value="f"> lion <br>
+<input type="radio" name="q2" value="f"> snail <br>
+<input type="radio" name="q2" value="f"> tiger <br>
+<input type="radio" name="q2" value="t" id="q2"class="answer"> Cheetah <br>
+<hr>
+<p>3.What is the fastest animal?</p>
+
+<input type="radio" name="q3" value="f"> Lion <br>
+<input type="radio" name="q3" value="f"> Cheetah <br>
+<input type="radio" name="q3" value="f"> Sparrow <br>
+<input type="radio" name="q3" value="t" id="q3"class="answer"> Peregrine Falcon <br>
+<hr>
+<p>4.Who founded the laws of motion</p>
+
+<input type="radio" name="q4" value="t" id="q4"class="answer"> Issac Newton <br>
+<input type="radio" name="q4" value="f"> Albert Einstien <br>
+<input type="radio" name="q4" value="f"> Steven Hawking <br>
+<input type="radio" name="q4" value="f"> Alexander Graham Bell <br>
+<hr>
+<p>5.Choose which one is a wonder of the world</p>
+
+<input type="radio" name="q5" value="f"> Mcdonalds <br>
+<input type="radio" name="q5" value="f"> Melbourne Museum <br>
+<input type="radio" name="q5" value="t" id="q5"class="answer"> Leaning Tower of Pisa <br>
+<input type="radio" name="q5" value="f"> China <br>
+<hr>
+<p>6.What is 12<sup>2</sup>?</p>
+
+<input type="radio" name="q6" value="f"> 24 <br>
+<input type="radio" name="q6" value="f"> 30 <br>
+<input type="radio" name="q6" value="f"> 122 <br>
+<input type="radio" name="q6" value="t" id="q6"class="answer"> 144 <br>
+<hr>
+<p>7.How many planets are in our solar system?</p>
+
+<input type="radio" name="q7" value="f"> 10 <br>
+<input type="radio" name="q7" value="t" id="q7"class="answer"> 8 <br>
+<input type="radio" name="q7" value="f"> 7 <br>
+<input type="radio" name="q7" value="f" > 9 <br>
+<hr>
+<p>8.What is iron man's latest A.I?</p>
+
+<input type="radio" name="q8" value="t" id="q8"class="answer"> Friday <br>
+<input type="radio" name="q8" value="f"> Jarvis <br>
+<input type="radio" name="q8" value="f"> Sunday <br>
+<input type="radio" name="q8" value="f"> Monday <br>
+<hr>
+<p>9.How many hearts does an octopus have</p>
+
+<input type="radio" name="q9" value="f"> 10 <br>
+<input type="radio" name="q9" value="f"> 8 <br>
+<input type="radio" name="q9" value="f"> 1 <br>
+<input type="radio" name="q9" value="t" id="q9"class="answer"> 3 <br>
+<hr>
+<p>10.What is the name of the creator of this quiz?</p>
+
+<input type="radio" name="q10" value="f"> Knatik <br>
+<input type="radio" name="q10" value="f"> kraik <br>
+<input type="radio" name="q10" value="t" id="q10"class="answer"> Karthik <br>
+<input type="radio" name="q10" value="f"> Steve <br>
+<hr>
+<h2 id="result"></h2>
+
+<button onclick="check()" id="bumboi"> Submit </button>
+
+
+
+
+
+
+
+
+
+</div>
+<script>
+var score = 0 ;
+
+function check()
+{
+var x = document.getElementsByClassName("answer")
+
+for(var i = 0 ; i < x.length ; i++)
+{
+if( x[i].checked)
+{
+
+score++;
+
+}
+
+
+}
+
+if(score<2  )
+{ var message = "Better luck next time!"}
+else if (score<7) {var message = "Good....  Try To Improve" ;}
+else{var message = "Excellent... Keep it up!"}
+document.getElementById("result").innerHTML ="Your score is--->"+ score+ " " + message ;
+
+
+}
+
+function showbar()
+{document.getElementById("sidebar").style.left = "0px";}
+
+function hide()
+{document.getElementById("sidebar").style.left = "-230px";}
+function light()
+{
+    document.getElementById("quiz").style.border = "white 2px solid";
+    document.getElementById("quiz").style.backgroundColor = "wheat";
+    document.getElementById("quiz").style.margin = "auto";
+    document.getElementById("body").style.backgroundColor = " lightblue"
+}
+
+function dark()
+{
+    document.getElementById("quiz").style.border = "white 2px solid";
+    document.getElementById("quiz").style.backgroundColor = "grey";
+    document.getElementById("quiz").style.margin = "auto";
+    document.getElementById("body").style.backgroundColor = "grey"
+}
+
+</script>
+
+
+</body>
+</html>

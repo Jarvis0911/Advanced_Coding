@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+   
+    <title>Animations</title>
+    <style>
+
+.container {
+
+width: 125px;
+height: 125px;
+background-color: red;
+position: relative;
+animation-name: sample;
+animation-duration: 10s;
+animation-timing-function: cubic-bezier(0,1,1,0);
+animation-iteration-count: infinite;
+/* ease in, ease in out */
+}
+
+        @keyframes sample{
+
+            0%{ top :0px; width: 300px; background-color: salmon; left: 0px; border-radius: 0%;}
+            25%{ top :0px; width: 300px; background-color: brown;left: 200px;border-radius: 50%;}
+            50%{ top:150px ;  width: 212.5px  ; background-color: seagreen; left: 200px;    border-radius: 0%;                    }
+            75%{ top :0px; width: 300px; background-color: red;left: 0px;border-radius: 50%;}
+            100%{ top : 300px; width :125px; background-color: cyan;left: 0px;border-radius: 0%;}
+
+
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+            <h1>Animations</h1>
+
+        <div class="container"> </div>
+
+</body>
+</html>

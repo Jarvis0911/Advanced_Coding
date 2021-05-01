@@ -1,0 +1,1 @@
+document.write("Hello this is my first JS code.  ");

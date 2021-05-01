@@ -1,0 +1,49 @@
+
+<html lang="en">
+<head>
+<title>Carousel</title>
+
+<style>
+
+
+#slider{ width: 100%;
+height: 350px;
+border: crimson 10px groove;
+background-image: url(Iron\ man\ 2.png); 
+background-size: 100% 100%  ;   
+transition: all 0.4s ;
+}
+
+
+</style>
+
+
+
+
+</head>
+<body>
+    
+<div id="slider">
+
+</div>
+
+
+
+</body>
+<script>
+
+var images = ["invertedskull.png", "Image1.png","Image2.png","IronMan2.png"]
+
+var i = -1;
+function slider ()
+{
+if (i>4)
+{i = 0 ;}
+i++
+
+document.getElementById("slider").style.backgroundImage = "url("+ images[i]+")"
+
+}
+setInterval(slider, 3000)
+</script>
+</html>

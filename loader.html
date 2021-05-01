@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Loader</title>
+
+    <style>
+
+.center{   max-width: 175px;
+  margin: auto;
+  margin-top: 300px;}
+
+
+#loader{
+    width: 130px;
+    height: 130px;
+    border : black   15px groove;
+    border-radius: 50%;
+animation-name: loader;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+animation-timing-function: linear ;
+border-top: red 15px solid;
+animation-direction: normal;
+margin: auto;
+margin-top: 15% ;
+}
+
+@keyframes loader {
+
+from{ transform: rotate(0deg);}
+
+to{ transform: rotate(360deg);}
+
+}
+#container {display: none;}
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+
+    <div id="container">
+        <h1>My Webpage</h1>
+        <p>
+        
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam delectus molestiae aspernatur! Repellendus iste ab sit, ullam quam fugit magni optio nulla, blanditiis quis quod harum fuga distinctio. Laborum, nisi. In delectus aliquam aspernatur? Et minima ut mollitia excepturi delectus nesciunt nulla, maxime reprehenderit commodi velit impedit hic modi nostrum.
+        
+        </p>
+        
+        </div>
+        
+<div id="loader"> </div>
+
+<script>
+
+function show()
+
+{
+document.getElementById("container").style.display="block"
+document.getElementById("loader").style.display="none"
+}
+setTimeout(show, 6000)
+</script>
+
+</body>
+</html>
